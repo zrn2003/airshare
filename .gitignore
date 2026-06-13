@@ -1,0 +1,41 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+## SQLite
+*.db
+
+## OS
+Thumbs.db
+Desktop.ini
+
+## App Specific
+publish/
+AirShare.App.exe.WebView2/
+WebView2/

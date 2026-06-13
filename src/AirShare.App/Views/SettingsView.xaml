@@ -1,0 +1,54 @@
+<UserControl x:Class="AirShare.App.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="720">
+            <StackPanel Margin="0,0,0,24">
+                <TextBlock Text="Settings"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="{StaticResource TextBrush}"/>
+                <TextBlock Text="Configure buffer size, theme, and audio engine preferences."
+                           FontSize="16"
+                           Foreground="{StaticResource MutedBrush}"
+                           Margin="0,4,0,0"/>
+            </StackPanel>
+
+            <Border Style="{StaticResource StitchCard}" Margin="0,0,0,16">
+                <StackPanel>
+                    <TextBlock Text="Audio Engine"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Foreground="{StaticResource TextBrush}"/>
+                    <TextBlock Text="Buffer size (frames)"
+                               Margin="0,20,0,8"
+                               Foreground="{StaticResource MutedBrush}"/>
+                    <Slider Minimum="128"
+                            Maximum="2048"
+                            TickFrequency="128"
+                            IsSnapToTickEnabled="True"
+                            Value="{Binding BufferSize}"/>
+                    <TextBlock Text="{Binding BufferSize, StringFormat=Current: {0} frames}"
+                               Foreground="{StaticResource TextBrush}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource StitchCard}" Margin="0,0,0,16">
+                <StackPanel>
+                    <TextBlock Text="Appearance"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Foreground="{StaticResource TextBrush}"/>
+                    <CheckBox Content="Use dark theme"
+                              Margin="0,16,0,0"
+                              IsChecked="{Binding UseDarkTheme}"/>
+                </StackPanel>
+            </Border>
+
+            <Button Content="Save Settings"
+                    Style="{StaticResource StitchPrimaryButton}"
+                    HorizontalAlignment="Left"
+                    Command="{Binding SaveSettingsCommand}"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

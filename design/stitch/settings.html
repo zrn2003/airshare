@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AirShare - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed": "#002200",
+                        "primary-fixed": "#d3e3ff",
+                        "tertiary-fixed-dim": "#c9c6c3",
+                        "surface-container-low": "#f3f3f3",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "primary": "#005faa",
+                        "primary-fixed-dim": "#a3c9ff",
+                        "tertiary-fixed": "#e6e2df",
+                        "outline": "#717783",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#0060ab",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "on-secondary-fixed-variant": "#005303",
+                        "secondary": "#006e06",
+                        "background": "#f9f9f9",
+                        "inverse-on-surface": "#f1f1f1",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ffffff",
+                        "secondary-fixed-dim": "#79dd68",
+                        "on-secondary-container": "#007306",
+                        "secondary-fixed": "#94fa81",
+                        "tertiary": "#5f5d5b",
+                        "on-primary-fixed": "#001c39",
+                        "primary-container": "#0078d4",
+                        "inverse-primary": "#a3c9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "on-surface-variant": "#404752",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#787674",
+                        "on-tertiary-container": "#ffffff",
+                        "outline-variant": "#c0c7d4",
+                        "secondary-container": "#91f77e",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "margin-desktop": "48px",
+                        "xl": "32px",
+                        "max-width": "1200px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-mono": ["Geist"],
+                        "headline-md-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .mica-surface {
+            background: rgba(249, 249, 249, 0.8);
+            backdrop-filter: blur(40px) saturate(150%);
+            -webkit-backdrop-filter: blur(40px) saturate(150%);
+        }
+        .acrylic-stroke {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #005faa;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-hidden h-screen flex">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col py-lg px-md mica-surface border-r border-white/10 shadow-md z-50">
+<div class="mb-xl px-sm">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">AirShare</h1>
+<p class="text-on-surface-variant text-xs opacity-70">V2.4.0 Professional</p>
+</div>
+<nav class="flex-1 space-y-base">
+<a class="flex items-center gap-md p-sm rounded-lg transition-colors text-on-surface-variant hover:bg-surface-container-high group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md p-sm rounded-lg transition-colors text-on-surface-variant hover:bg-surface-container-high group" href="#">
+<span class="material-symbols-outlined" data-icon="router">router</span>
+<span class="font-body-md">Device Manager</span>
+</a>
+<a class="flex items-center gap-md p-sm rounded-lg transition-colors text-on-surface-variant hover:bg-surface-container-high group" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-body-md">Analytics</span>
+</a>
+<!-- Active State: Settings -->
+<a class="flex items-center gap-md p-sm rounded-lg transition-colors text-primary font-bold border-l-4 border-primary bg-primary/5" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-lg border-t border-black/5 flex flex-col gap-sm">
+<a class="flex items-center gap-md p-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-body-md">Profile</span>
+</a>
+<div class="flex items-center gap-md p-sm text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+<span class="text-xs">Version 2.4.0</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 h-screen flex flex-col relative overflow-hidden">
+<!-- TopNavBar -->
+<header class="h-16 flex items-center justify-between px-lg mica-surface border-b border-white/10 shadow-sm z-40">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant/60" data-icon="search">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="Search settings..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-xs text-secondary bg-secondary/10 px-sm py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-wider">Sharing Active</span>
+</div>
+<button class="bg-primary text-on-primary px-lg py-2 rounded-full text-sm font-bold hover:brightness-110 active:scale-95 transition-all shadow-sm">
+                    Stop Sharing
+                </button>
+<div class="flex items-center gap-sm ml-sm text-on-surface-variant">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant/50 transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant/50 transition-all">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-white/20 shadow-sm cursor-pointer hover:ring-2 ring-primary/40 transition-all" data-alt="A close-up portrait of a professional sound engineer with a focused expression, wearing sleek studio headphones. The background is a blurred high-tech audio recording studio with soft blue and cool white ambient lighting, maintaining the clean corporate aesthetic of the AirShare brand. The lighting highlights the texture of his gear and the modern professional atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_xBODHdYQVmukC6lgU7lF1iQPuX5CpWWi3wbAmnBhRkxXdMoyYdciJJNve-jvAUA0Y1CRpt-N8o4R0IvUxTg6pIgNpTRjidjBjBigxdfF4XeH9WUkJoKMw5VLeCwqo5LFCqzL-NscfD8soJszPBXcL4KKGuFamO3sJ52NFgQnIbXAD4xj7KYHmh-um8QtIuEkH0R0IRsU3jxCdajhIoLj0fv8-H9EIIjZn1IVeWL5smZ-90IVQ3sMkvBiT2mzIK_Q4BSxnOAAvQK9"/>
+</div>
+</div>
+</header>
+<!-- Canvas / Settings Scroll Area -->
+<section class="flex-1 overflow-y-auto custom-scrollbar p-xl bg-surface-bright/30">
+<div class="max-w-4xl mx-auto space-y-xl pb-32">
+<header class="mb-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">Application Settings</h2>
+<p class="text-on-surface-variant opacity-80">Configure your professional audio routing and interface preferences.</p>
+</header>
+<!-- Settings Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- General Section -->
+<div class="mica-surface acrylic-stroke p-lg rounded-xl shadow-sm space-y-md">
+<div class="flex items-center gap-sm border-b border-black/5 pb-sm">
+<span class="material-symbols-outlined text-primary" data-icon="settings_applications">settings_applications</span>
+<h3 class="font-headline-sm text-headline-sm">General</h3>
+</div>
+<div class="space-y-lg py-sm">
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-body-md text-on-surface font-medium">Start on boot</span>
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-body-md text-on-surface font-medium">Minimize to tray</span>
+<div class="relative inline-flex items-center">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Appearance Section -->
+<div class="mica-surface acrylic-stroke p-lg rounded-xl shadow-sm space-y-md">
+<div class="flex items-center gap-sm border-b border-black/5 pb-sm">
+<span class="material-symbols-outlined text-primary" data-icon="palette">palette</span>
+<h3 class="font-headline-sm text-headline-sm">Appearance</h3>
+</div>
+<div class="space-y-lg py-sm">
+<div class="flex items-center justify-between">
+<span class="text-body-md text-on-surface font-medium">Color Mode</span>
+<div class="flex bg-surface-container-highest p-1 rounded-lg">
+<button class="px-sm py-1 rounded bg-white shadow-sm text-xs font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="light_mode">light_mode</span> Light
+                                    </button>
+<button class="px-sm py-1 rounded text-xs font-medium text-on-surface-variant flex items-center gap-1 hover:bg-white/50">
+<span class="material-symbols-outlined text-sm" data-icon="dark_mode">dark_mode</span> Dark
+                                    </button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-body-md text-on-surface font-medium">Accent Color</span>
+<div class="flex gap-xs">
+<button class="w-6 h-6 rounded-full bg-[#005faa] ring-2 ring-offset-2 ring-[#005faa]"></button>
+<button class="w-6 h-6 rounded-full bg-[#006e06] hover:scale-110 transition-transform"></button>
+<button class="w-6 h-6 rounded-full bg-[#ba1a1a] hover:scale-110 transition-transform"></button>
+<button class="w-6 h-6 rounded-full bg-[#787674] hover:scale-110 transition-transform"></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Audio Section (Full Width Desktop) -->
+<div class="mica-surface acrylic-stroke p-lg rounded-xl shadow-sm space-y-md md:col-span-2">
+<div class="flex items-center gap-sm border-b border-black/5 pb-sm">
+<span class="material-symbols-outlined text-primary" data-icon="graphic_eq">graphic_eq</span>
+<h3 class="font-headline-sm text-headline-sm">Audio Engine</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl py-sm">
+<div class="space-y-sm">
+<div class="flex justify-between items-center mb-base">
+<label class="text-body-md text-on-surface font-medium">Buffer Size</label>
+<span class="font-label-mono text-label-mono text-primary bg-primary/10 px-2 py-0.5 rounded" id="buffer-val">128ms</span>
+</div>
+<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer slider-thumb" max="500" min="10" oninput="document.getElementById('buffer-val').textContent = this.value + 'ms'" type="range" value="128"/>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-medium">
+<span>10ms</span>
+<span>250ms</span>
+<span>500ms</span>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="text-body-md text-on-surface font-medium block">Sample Rate</label>
+<div class="grid grid-cols-2 gap-sm">
+<button class="flex items-center justify-between px-md py-sm rounded-lg border-2 border-primary bg-primary/5 text-primary font-bold transition-all">
+<span>44.1kHz</span>
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<button class="flex items-center justify-between px-md py-sm rounded-lg border border-outline-variant hover:border-primary/50 text-on-surface-variant transition-all">
+<span>48kHz</span>
+<span class="material-symbols-outlined text-sm opacity-0" data-icon="circle">circle</span>
+</button>
+</div>
+<p class="text-[10px] text-on-surface-variant italic">High fidelity tracking recommended for 48kHz studio environments.</p>
+</div>
+</div>
+</div>
+<!-- Advanced Section -->
+<div class="mica-surface acrylic-stroke p-lg rounded-xl shadow-sm space-y-md md:col-span-2">
+<div class="flex items-center gap-sm border-b border-black/5 pb-sm">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+<h3 class="font-headline-sm text-headline-sm">Advanced Controls</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg py-sm">
+<div class="p-md rounded-lg bg-surface-container-low border border-white/20">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="text-body-md font-bold text-on-surface">AI-Sync Optimization</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mt-1">Predictive clocking uses neural networks to eliminate jitter in real-time streams.</p>
+</div>
+<div class="relative inline-flex items-center pt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+<div class="p-md rounded-lg bg-surface-container-low border border-white/20">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="text-body-md font-bold text-on-surface">Diagnostic Data Sharing</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mt-1">Send anonymous performance logs to help us improve connection stability.</p>
+</div>
+<div class="relative inline-flex items-center pt-1">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Decorative Card -->
+<div class="md:col-span-2 relative overflow-hidden rounded-xl h-32 flex items-center group cursor-pointer shadow-sm">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60 z-10"></div>
+<img alt="Studio background" class="absolute inset-0 w-full h-full object-cover grayscale opacity-30 group-hover:scale-105 transition-transform duration-700" data-alt="A professional, modern workspace with multiple high-definition monitors displaying complex digital audio workstations. The scene is bathed in a cinematic, cool-toned aesthetic with hints of blue and cyan light reflecting off metallic surfaces. The atmosphere is quiet, focused, and professional, perfectly matching the AirShare high-performance branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHo8YnUorotlwFQDCXnJ8XnfTwKLImv4bSs3CfF6-ApxNyys925CQtGFynNb-6u8jqJtgLcCtS3u_9Ky5a9INFE-cTweirliOa1ShsP7rjVJAx6J0Juy-5ysM1tXSSQjFg9OmbvyEKsfSYS49dNOg_RBO1IrR2_QwZr9nr1pW8idZ4Fy3LTpy9OeGDwAPm4l2YF9QGcEkoawgaH4uXS-hQkk6e20PrUC6AoGcjraVApAlg2MxjT_UpqB9khfAamKTAReVrHj1FBCoO"/>
+<div class="relative z-20 px-xl flex justify-between items-center w-full text-white">
+<div>
+<h4 class="font-headline-sm text-headline-sm">Need help?</h4>
+<p class="text-xs opacity-90">View our professional documentation or contact enterprise support.</p>
+</div>
+<button class="bg-white text-primary px-lg py-2 rounded-full text-xs font-bold hover:shadow-lg transition-all">
+                                Open Knowledge Base
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BottomNavBar (Persistent Controls) -->
+<footer class="h-20 mica-surface border-t border-white/10 shadow-lg flex items-center justify-between px-xl ml-0 z-50 fixed bottom-0 right-0 w-[calc(100%-16rem)]">
+<div class="flex items-center gap-xl flex-1">
+<div class="flex flex-col gap-1 min-w-[200px]">
+<div class="flex justify-between items-center">
+<span class="text-label-mono font-label-mono text-[10px] text-on-surface-variant uppercase tracking-tighter">System Audio</span>
+<span class="text-label-mono font-label-mono text-[10px] text-primary">75%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+</button>
+<div class="h-8 w-[1px] bg-white/10"></div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-primary bg-primary/10 transition-all">
+<span class="material-symbols-outlined" data-icon="graphic_eq">graphic_eq</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined" data-icon="mic_off">mic_off</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="text-right mr-md">
+<p class="text-[10px] font-bold text-on-surface uppercase tracking-widest leading-none">Master Level</p>
+<p class="text-label-mono font-label-mono text-primary text-xl font-bold">-6.2 dB</p>
+</div>
+<div class="flex gap-1 h-8 items-end pb-1">
+<div class="w-1.5 bg-secondary/60 rounded-full h-3"></div>
+<div class="w-1.5 bg-secondary/70 rounded-full h-5"></div>
+<div class="w-1.5 bg-secondary/80 rounded-full h-7"></div>
+<div class="w-1.5 bg-secondary rounded-full h-6 animate-pulse"></div>
+<div class="w-1.5 bg-secondary/50 rounded-full h-4"></div>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Micro-interactions and atmospheric logic
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Simple mock for "Accent Color" logic
+        const accentDots = document.querySelectorAll('.rounded-full.w-6.h-6');
+        accentDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                accentDots.forEach(d => d.classList.remove('ring-2', 'ring-offset-2', 'ring-[#005faa]', 'ring-[#006e06]', 'ring-[#ba1a1a]', 'ring-[#787674]'));
+                const bgColor = window.getComputedStyle(dot).backgroundColor;
+                dot.classList.add('ring-2', 'ring-offset-2');
+                // Normally we would update CSS variables here
+            });
+        });
+    </script>
+</body></html>

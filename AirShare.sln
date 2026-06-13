@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EBB330F9-1109-4453-9875-666A6D6801DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirShare.Core", "src\AirShare.Core\AirShare.Core.csproj", "{278EE87B-14FB-47D7-B00E-FFFAB5AA7207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirShare.Data", "src\AirShare.Data\AirShare.Data.csproj", "{BD73B4CD-CA77-4295-8713-B4B5079E5E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirShare.Services", "src\AirShare.Services\AirShare.Services.csproj", "{351FB662-0122-400A-AE0C-815E4368655B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirShare.App", "src\AirShare.App\AirShare.App.csproj", "{BCDC3F6D-9CC2-4E3D-BB92-17177BB2382E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2E24D228-0F6D-43E0-90AE-1F749C58C0CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirShare.Tests", "tests\AirShare.Tests\AirShare.Tests.csproj", "{8A33BF4C-690B-4175-A018-EFB40271298E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{278EE87B-14FB-47D7-B00E-FFFAB5AA7207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278EE87B-14FB-47D7-B00E-FFFAB5AA7207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278EE87B-14FB-47D7-B00E-FFFAB5AA7207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278EE87B-14FB-47D7-B00E-FFFAB5AA7207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD73B4CD-CA77-4295-8713-B4B5079E5E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD73B4CD-CA77-4295-8713-B4B5079E5E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD73B4CD-CA77-4295-8713-B4B5079E5E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD73B4CD-CA77-4295-8713-B4B5079E5E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{351FB662-0122-400A-AE0C-815E4368655B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351FB662-0122-400A-AE0C-815E4368655B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351FB662-0122-400A-AE0C-815E4368655B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351FB662-0122-400A-AE0C-815E4368655B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDC3F6D-9CC2-4E3D-BB92-17177BB2382E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDC3F6D-9CC2-4E3D-BB92-17177BB2382E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDC3F6D-9CC2-4E3D-BB92-17177BB2382E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDC3F6D-9CC2-4E3D-BB92-17177BB2382E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A33BF4C-690B-4175-A018-EFB40271298E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A33BF4C-690B-4175-A018-EFB40271298E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A33BF4C-690B-4175-A018-EFB40271298E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A33BF4C-690B-4175-A018-EFB40271298E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{278EE87B-14FB-47D7-B00E-FFFAB5AA7207} = {EBB330F9-1109-4453-9875-666A6D6801DA}
+		{BD73B4CD-CA77-4295-8713-B4B5079E5E47} = {EBB330F9-1109-4453-9875-666A6D6801DA}
+		{351FB662-0122-400A-AE0C-815E4368655B} = {EBB330F9-1109-4453-9875-666A6D6801DA}
+		{BCDC3F6D-9CC2-4E3D-BB92-17177BB2382E} = {EBB330F9-1109-4453-9875-666A6D6801DA}
+		{8A33BF4C-690B-4175-A018-EFB40271298E} = {2E24D228-0F6D-43E0-90AE-1F749C58C0CA}
+	EndGlobalSection
+EndGlobal
